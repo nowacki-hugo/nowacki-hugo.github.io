@@ -1,16 +1,16 @@
-title:              Clean Blog
-email:              your-email@example.com
-description:        A Blog Theme by Start Bootstrap
-author:             Start Bootstrap
+title:              Hugo Nowacki, Ph.D.
+email:              hugo.nowacki@oca.eu
+description:        Professional webpage
+author:             H. Nowacki
 baseurl:            ""  #"/startbootstrap-clean-blog-jekyl"
 url:                "https://nowacki-hugo.github.io" #"https://startbootstrap.github.io"
 
 # Social Profiles
-twitter_username:   SBootstrap
-github_username:    StartBootstrap
-facebook_username:  StartBootstrap
+twitter_username:  
+github_username:    
+facebook_username:  
 instagram_username:  
-linkedin_username:
+linkedin_username: Hugo Nowacki
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
