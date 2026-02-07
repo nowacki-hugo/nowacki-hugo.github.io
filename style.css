@@ -69,3 +69,6 @@ footer {
   font-size: 0.9em;
   color: #888;
 }
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;}
