@@ -15,7 +15,9 @@
           <a class="nav-link" href="{{"/about" | relative_url }}">About me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ "/mywork" | relative_url }}">My work</a>
+         <a class="nav-link dropdown-toggle"  href="{{ "/mywork/" | relative_url }}"  data-toggle="dropdown">My Work</a>
+            <a class="dropdown-item" href="{{ "/mywork/Exoplanets/" | relative_url }}">  Exoplanets</a>
+            <a class="dropdown-item" href="{{ "/mywork/YSOs/" | relative_url }}"> YSOs</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{"/resume" | relative_url }}">Resume</a>
