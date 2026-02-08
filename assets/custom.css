@@ -10,8 +10,8 @@ header.masthead .page-heading {
 
 /* Image avatar */
 header.masthead .page-heading img.site-avatar {
-  width: 150px !important;
-  height: 150px !important;
+  width: 220px !important;
+  height: 220px !important;
   max-width: none !important;
   border-radius: 50% !important;
   object-fit: cover;
