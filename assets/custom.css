@@ -1,38 +1,40 @@
-/* ===== Avatar circulaire dans le header (HOME uniquement) ===== */
+/* ===== Avatar dans le header ===== */
 
-.home header.masthead .page-heading {
+header.masthead .page-heading {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 25px;
   text-align: left;
 }
 
 /* Image avatar */
-.home header.masthead .site-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+header.masthead .page-heading img.site-avatar {
+  width: 120px !important;
+  height: 120px !important;
+  max-width: none !important;
+  border-radius: 50% !important;
   object-fit: cover;
+  display: block;
+  margin: 0;
   border: 3px solid rgba(255, 255, 255, 0.85);
-  flex-shrink: 0;
 }
 
-/* Texte du header */
-.home header.masthead .page-heading h1,
-.home header.masthead .page-heading .subheading {
+/* Reset marges du texte */
+header.masthead .page-heading h1,
+header.masthead .page-heading .subheading {
   margin: 0;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .home header.masthead .page-heading {
+  header.masthead .page-heading {
     flex-direction: column;
     text-align: center;
   }
 
-  .home header.masthead .site-avatar {
-    width: 90px;
-    height: 90px;
+  header.masthead .page-heading img.site-avatar {
+    width: 90px !important;
+    height: 90px !important;
   }
 }
-
