@@ -46,8 +46,7 @@ layout: default
             {% endif %}
           </a>
           <p class="post-meta">Published by
-            {{ post.author }}
-            &middot;  in
+            {{ post.author }} ({{ post.date | date: '%Y' }}) in
             {{post.review}} &middot; {% include read_time.html content=post.content %}            
           </p>
         </article>
