@@ -34,7 +34,7 @@ layout: default
         <h2>Recent publications</h2>
         <p>Here is a list of recent publications to which I contributed significantly</p>
         <!-- Home Post List -->
-        {% for post in site.posts limit : 3 %}
+        {% for post in site.posts limit : 2 %}
 
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
