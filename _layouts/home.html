@@ -29,13 +29,17 @@ layout: default
       <div class="col-lg-11 col-md-10 mx-auto">
 
         {{ content }}
-        <p>TEST : I am a young postdoc at the Observatoire de la Côte d'Azur in Nice (France) working among the ISSP ERC project (Ref, lien ?).</p>
+        
         <p>My main scientific interest lies in the understanding of planet formation aroung Sun-like stars, see (ref to page) for the complete description of my work.</p>
+
+        <h2>Current position </h2>
+        <p>TEST : I am a young postdoc at the Observatoire de la Côte d'Azur in Nice (France) working among the ISSP ERC project (Ref, lien ?).</p>
+
+        
         <h2>Latest publications</h2>
-        <p>Here is a list of recent publications to which I contributed significantly</p>
+        <p>Here are the most recent publications to which I contributed significantly</p>
         <!-- Home Post List -->
         {% for post in site.posts limit : 2 %}
-
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h3 class="post-title">{{ post.title }}</h3>
@@ -60,8 +64,7 @@ layout: default
         </div>
 
         <p>Trying to put some text bellow the sample of articles to see if it is ok to continue </p>
-        <h2>Current position </h2>
-        <p>Here would be a brief description of the current position occupied. Describing the overall context of the project, the importance of the position, the milestones expected and the ones already reached.</p>
+        
       </div>
     </div>
   </div>
