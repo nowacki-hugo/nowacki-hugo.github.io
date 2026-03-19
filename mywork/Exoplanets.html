@@ -18,13 +18,19 @@ background: '/img/exoplanet.jpg'
   But how is measuring the diameter of stars a way to characterize exoplanets ? Well, it is a tortuous path we are about to follow, and beware to whoever is not a professional astronomer : this might be painful, and you may skip the next section.
 </p>
 
-<h3>From the stellar diameter to the planet interior</h3>
-<p> The two most basic properties of planet interior models are the radius and the mass of the planet. In order to obtain those, the two main techniques are radial velocities and planetary transits. 
+<h3>From the stellar radius to the planet interior composition</h3>
+<p> The two most basic properties of planet interior models are the radius and the mass of the planet \(R_p\) and \(M_p\). They are often displayed in a mass-radius plot on which different compositions are shown, like in the famously overloaded plot from Zeng et al. (2019). 
+In order to obtain those parameters, the two main techniques are radial velocities and planetary transits. 
 While the study of the radial velocity of the star provides an indication on the mass of the planet affecting the bulk motion of the star measured through the Doppler shift of spectral lines (ref), the detailed study of exoplanets transits provides 
 great constraints on the planet's radius relative to the radius of the star, but also on the stellar density. The combination of both observations is necessary to constrain the planet interior. Unfortunately, observing a planet in transit requires that the orbit of the planet is aligned with the star and the line of sight from Earth, which is quite rare.
 Nevertheless, more than a thousand planets have been detected with both methods as of 2026, which is already a decent sample to explore the diversity of Physics at stake in planets formation, composition and evolution.
 </p>
 <p>
-  For those stars that are observed by both methods, a fundamental parameter is paramount in order to express properties of the planet on their own : the stellar radius \(R_*\).
-  From geometric considerations, it can be shown that during the transit, the stellar photometry reaches a depth \(\Delta F = \frac{R_p}{R_*}\)
+  For those stars that are observed by both methods, the stellar radius \(R_*\) is paramount in order to obtain the properties of the planet.
+  From geometric considerations, it can be shown that during the transit, the stellar photometry reaches a depth \(\sqrt{\Delta F} = \frac{R_p}{R_*}\), and therefore, knowing the stellar radius is required to know the radius of the planet.
+  We can also notice that beyond the importance of the stellar radius, the precision of the planet's radius is also driven by our precision in photometry (hence the importance of space missions such as TESS or Plato).
+  From Kepler's third law and Newton's second principle, it can be showed that the planet's mass is connected to the amplitude of radial velocity observed \(K\), the inclination, period and eccentricity of the orbit (\(i\), \(P\) and \(e\), respectively) 
+  and the stellar mass \(M_*\) through : \( M_p \propto \frac{K\sqrt{1-e^2}}{\sin{i}} \times \left(P M_*^2\right)^{1/3} \).
+  Note that in this expression, \(K\) \(P\) and the eccentricity of the orbit come from the radial velocity of the star while the inclination of the orbit comes from the transit light curve. Finally, the stellar mass can be obtained from the combination of the stellar density \(\rho_*\), also obtained through the transit light curve and... the radius of the star ! 
+  (\( M_* = \frac{4\pi}{3} \rho_* \times R_*^3 \))
 </p>
