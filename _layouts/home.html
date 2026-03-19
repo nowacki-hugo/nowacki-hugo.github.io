@@ -30,7 +30,7 @@ layout: default
 
         {{ content }}
         
-        <h2>Current position </h2>
+        <h2 class="section-heading">Current position </h2>
         <p>
           My current postdoctoral position has taken me to the Observatoire de la Côte d'Azur (OCA) in Nice, France. There, I am working for the Interferometric Survey of Stellar Parameters (<a href="https://www.oca.eu/fr/issp-welcome">ISSP</a>), funded by the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (Grant agreement No. 101019653)
           Among this project, I combine two main responsibilities. First, I have been recruited to characterise and optimise the SPICA-FT fringe-tracker operated by the CHARA interferometric array in mount Wilson observatory, California. Second, I lead the science program exploiting the SPICA interferometric beam combiner focused on the exoplanet host stars.
@@ -40,13 +40,13 @@ layout: default
 
         <hr>
 
-        <h2>Who I am</h2>
+        <h2 class="section-heading">Who I am</h2>
         <p>
           As a pationate researcher, my ...
         </p>
 
         <hr>
-        <h2>Latest publications</h2>
+        <h2 class="section-heading">Latest publications</h2>
         <p>Here are the most recent publications to which I contributed significantly</p>
         <!-- Home Post List -->
         {% for post in site.posts limit : 2 %}
@@ -71,7 +71,8 @@ layout: default
           <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Articles &rarr;</a>
         </div>
 
-        <p>Trying to put some text bellow the sample of articles to see if it is ok to continue </p>
+        <hr>
+        
         
       </div>
     </div>
