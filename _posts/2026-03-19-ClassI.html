@@ -20,9 +20,29 @@ Magnetic fields play a crucial role throughout stellar evolution, regulating ang
 </p>
 
 <h2> Introduction </h2>
+<p>
+  While magnetism and its impact on the star-disk interaction have been densely explored during the pre-main sequence phase (<a href="https://www.scixplorer.org/abs/2015SSRv..191..339R/abstract">Romanova et al. 2015 </a>), our current knowledge on the magnetic properties, and on the star-disk interaction in earlier phases remains limited.
+  During those phases, the protostar experiences intense accretion, often through bursts, and grows in mass until it approaches its final mass (<a href="https://www.scixplorer.org/abs/2009ApJ...702L..27B/abstract">Baraffe et al. 2009 </a>; <a href="https://www.scixplorer.org/abs/2023ASPC..534..355F/abstract">Fischer et al. 2023 </a>). 
+  Such major internal structural changes may have a strong impact on the stellar magnetic field, which in turn may influence the connection between the star and its accretion disk (<a href="https://www.scixplorer.org/abs/2017A%26A...599A..49K/abstract">Kunitomo et al. 2017 </a>).
+  The progenitors of the CTTS (Class II) are the Class I protostars. These objects are still embedded within their envelopes of gas and dust (<a href="https://www.scixplorer.org/abs/1987IAUS..115....1L/abstract">Lada 1987 </a>).  
+  The protostars transiting from Class I to Class II are observed as Flat-Spectrum (FS) sources (<a href="https://www.scixplorer.org/abs/1994ApJ...434..614G/abstract">Greene et al. 1994 </a>). Due to their dense and obscuring environments, direct observation of Class I protostars and detection 
+  of photospheric features is challenging (<a href="https://www.scixplorer.org/abs/2010AJ....140.1214C/abstract">Connelley & Greene 2010</a>; <a href="https://www.scixplorer.org/abs/2005AJ....130.1145D/abstract">Doppmann et al. 2005</a>), making it difficult to study their surfaces and, therefore, their magnetic fields.
+</p>
 
 <h2> Analysis </h2>
+To analyse the magnetic signals within the photospheric lines, a normalisation of the spectra to their continuum is needed. While normalisation tools already exist, they lack specific options we aimed to incorporate (necessary for emission line spectra such as those of Class I sources). 
+The first part of this work consisted in the development of a normalisation tool for SPIRou data files called <a href="https://github.com/Lisa2626/Fantasio">Fantasio. </a>
+Then, the analysis itself consisted in extracting stellar properties such as the effecftive temperature \(T_{eff}\), rotation velocity \(v\sin{i}\) and veiling in the H and K bands in order to estimate the magnetic field of the stars. This was done thanks to synthetic spectra computed from MARCS atmosphere models
+and spectral lines lists from the VALD database. Least-Square Deconvolution (LSD) was applied to each SPIRou Stokes I and V spectra to obtain a photospheric Kernel that was compared to the synthetic data through a \(\chi_r^2\) minimization procedure. 
+The combination of the Null polarization signal and LSD V profile decided weither a magnetic field was detected or not. In cases of a detection, the magnetic field projected along the line (\(B_l\)) of sight was computed thanks to the formula of <a href="https://www.scixplorer.org/abs/2000MNRAS.313..851W/abstract"> Wade et al.(2020)</a>:
+\[ B_l = -2.14\times 10^{11} \frac{\int V(v)/I_c v dv}{\lambda z c \int [1-I(v)/I_c]dv} \]
 
+<div style="text-align: center">
+<img class="img-fluid" src="{{ site.baseurl }}/img/posts/V806Tau.png" alt="See Figure 2 of Drouglazet et al. (2026)" style="width: 30vw; min-width: 330px;" align="center">
+<span class="caption text-muted">LSD profiles of V806 Tau. Different colours are used for the different observations. The Y-axes are I/Ic, N/Ic, and V/Ic, where Ic is the intensity of the stellar continuum. 
+  The I profile represents the total intensity. Stokes V shows a clear Zeeman signature, which corresponds to an actual magnetic detection because the signal is significantly non-null 
+  compared to the surrounding noise and the N profile remains flat in the velocity domain.</span>
+</div>
 
 <h2> Conclusions </h2>
 <p> 
@@ -38,3 +58,8 @@ This study demonstrates the capabilities of SPIRou to probe the large-scale magn
 The next step is to perform ZDI on our magnetic sample. This will permit to unveil the topology of the magnetic field in Class I and FS objects, which has never been done to this date. 
 These topologies will be a key element in understanding the evolution of magnetic fields in protostars and of the star-disk interactions.
 </p>
+<div style="text-align: center">
+<img class="img-fluid" src="{{ site.baseurl }}/img/posts/Drouglazet2026.png" alt="See Figure 3 of Drouglazet et al. (2026)" style="width: 30vw; min-width: 330px;" align="center">
+<span class="caption text-muted">The distribution of projected rotational velocity for each star of the sample as a function of effective temperature. Magnetic stars are represented in red and undetected magnetic stars in black. 
+  For the magnetic stars, the size of the symbols are proportional to the maximum absolute values of the longitudinal magnetic field. For the non-detected magnetic stars, it is proportional to the minimum of the 3\(\sigma\) uncertainty on \(B_l\).</span>
+</div>
