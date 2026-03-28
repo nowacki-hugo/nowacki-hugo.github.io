@@ -37,10 +37,14 @@ Hydrogen recombination lines such as Br\(\gamma\) are tracers of hot gas within 
   but expand upon the body of interferometric studies of inflow/outflow mechanisms in general (e.g. <a href="https://www.scixplorer.org/abs/2010ApJ...718..774E/abstract">Eisner et al. 2010</a>). For the first time, we combine sophisticated modelling efforts of the near-infrared (NIR) 
   signatures of disk winds and magnetospheric accretion in T Tauri stars with the unparalleled spatial resolution of long-baseline interferometry.
 </p>
-
+<div style="text-align: center">
+<img class="img-fluid" src="{{ site.baseurl }}/img/posts/magnetosphere.png" alt="See Figure 2 of GRAVITY: Wojtczak et al. (2023)" style="width: 30vw; min-width: 330px;" align="center">
+<span class="caption text-muted">Example of a magnetospheric accretion model image, produced with the MCFOST radiative transfer code. Shown here is the continuum-subtracted Br\(\gamma\) emission region of a purely axisymmetric rotating magnetosphere with no additional emission components. 
+  Channel line maps such as this can be used to compute artificial interferometric observables which we are then able to compare to real observational data.</span>
+</div>
 <h2> Analysis </h2>
 <p>
-We made use of MCFOST (<a href="https://www.scixplorer.org/abs/2006A%26A...459..797P/abstract">Pinte et al. 2006</a>, <a href="https://www.scixplorer.org/abs/2009A%26A...498..967P/abstract">2009</a>) to produce intensity maps, such as shown in the figure below, in the wavelength range of the Br\(\gamma\) line. 
+We made use of MCFOST (<a href="https://www.scixplorer.org/abs/2006A%26A...459..797P/abstract">Pinte et al. 2006</a>, <a href="https://www.scixplorer.org/abs/2009A%26A...498..967P/abstract">2009</a>) to produce intensity maps, such as shown in the figure above, in the wavelength range of the Br\(\gamma\) line. 
 MCFOST is a dust and atomic line Monte Carlo and ray-tracing based radiative transfer code. It is capable of computing both line and continuum fluxes in multi-level atomic systems under non-local thermodynamical equlibrium (non-LTE) conditions (<a href="https://www.scixplorer.org/abs/2021A%26A...647A..27T/abstract">Tessore et al. 2021</a>, <a href="https://www.scixplorer.org/abs/2023A%26A...671A.129T/abstract">2023</a>).
 Under the magnetospheric accretion paradigm, the inner disk is magnetically truncated at a certain distance from the central star, at which point gas is funneled along the magnetic field lines and transported onto the stellar surface near the poles. In order to compute the emission produced in such a system with the MCFOST code, 
 we employ the model presented in (<a href="https://www.scixplorer.org/abs/1994ApJ...426..669H/abstract">Hartmann et al. (1994)</a>; Kurosawa et al. (<a href="https://www.scixplorer.org/abs/2006MNRAS.370..580K/abstract">2006</a>, <a href="https://www.scixplorer.org/abs/2011MNRAS.416.2623K/abstract">2011</a>), and 
@@ -49,7 +53,12 @@ In order to ensure a high degree of flexibility when adjusting the outflow compo
 the magneto-centrifugal disk wind as proposed by <a href="https://www.scixplorer.org/abs/1982MNRAS.199..883B/abstract">Blandford & Payne (1982)</a>, which features a mass outflow arising from a disk in Keplerian rotation along a range of open field lines anchored at the disk midplane.
 The channel maps computed with MCFOST were used to extract synthetic spectral and interferometric data which were then compared to the observational data set obtained with GRAVITY for RU Lup in 2021.
 </p>
-
+<div style="text-align: center">
+<img class="img-fluid" src="{{ site.baseurl }}/img/posts/model_RULup.png" alt="See Figure 3 of GRAVITY: Wojtczak et al. (2023)" style="width: 30vw; min-width: 330px;" align="center">
+<span class="caption text-muted">Schematic depiction of the magnetospheric accretion and disk wind models. Shown here are the geometrical parameters defining each component. These are: the rotational axis \(\Omega\), the magnetic dipole axis \(\mu\), the magnetic obliquity \(\beta_{ma}\), 
+  the wind focal point (S) displacement d, the inner and outer radius \(R_{mi}\) and \(R_{mo}\), and width \(\delta R_{mag}\), of the magnetosphere, the inner and outer radius \(R_{wi}\) and \(R_{wo}\), and width \(\delta R_{wind}\), of the wind, the dark disk radius \(R_{dd}\) 
+  beyond which the disk becomes completely opaque, and the cutoff \(z_{crit}\) at which the isothermal wind instantly reaches its \(10^4\) K temperature. The lower hemisphere parts of wind and magnetospheric funnel are omitted in this depiction for the sake of clarity.</span>
+</div>
 <h2> Conclusions </h2>
 <p>
   Both axisymmetric and non-axisymmetric magnetospheric accretion models produce either centrally peaked or flat characteristic size profiles across the line. No parameter configuration leads to a size increase at high velocities and a minimum size at the line centre, as observed for RU Lup. 
