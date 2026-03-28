@@ -24,15 +24,42 @@ Hydrogen recombination lines such as Br\(\gamma\) are tracers of hot gas within 
 
 <h2> Introduction </h2>
 <p>
-  Initial observations of T Tauri YSOs such as TW Hya (GRAVITY Collaboration 2020) and DoAr44 (Bouvier et al. 2020) with VLTI GRAVITY confirm the assumption that Br\(\gamma\) emission in these systems could be spatially constrained to a condensed region close to the stellar surface. 
-  In both cases, the authors relied on the co-rotation criterion to determine whether the spatial scale of the emission region is consistent with the scenario of stable magnetospheric accretion. The criterion dictates that the magnetosphere needs to be truncated within the co-rotation radius 
-  \(R_{co}\) for stable accretion columns to form, i.e. \(R_{mag}\) ≤ \(R_{co}\) (Romanova & Owocki 2016). In GRAVITY Collaboration (2023b) we followed up on these earlier works with a comparative study of Br\(\gamma\) line emission in seven T Tauri stars with strong Br\(\gamma\) signals. 
+  Initial observations of T Tauri YSOs such as TW Hya (<a href="https://www.scixplorer.org/abs/2020Natur.584..547G/abstract">GRAVITY Collaboration 2020</a>) and DoAr44 (<a href="https://www.scixplorer.org/abs/2020A%26A...643A..99B/abstract">Bouvier et al. 2020</a>) with VLTI GRAVITY confirm the assumption that the Br\(\gamma\) 
+  emission in these systems could be spatially constrained to a condensed region close to the stellar surface. In both cases, the authors relied on the co-rotation criterion to determine whether the spatial scale of the emission region is consistent with the scenario of stable magnetospheric accretion. 
+  The criterion dictates that the magnetosphere needs to be truncated within the co-rotation radius \(R_{co}\) for stable accretion columns to form, i.e. \(R_{mag}\) ≤ \(R_{co}\) (<a href="https://www.scixplorer.org/abs/2016smfu.book..347R/abstract">Romanova & Owocki 2016</a>). 
+  In <a href="https://www.scixplorer.org/abs/2023A%26A...669A..59G/abstract">GRAVITY Collaboration (2023b)</a> we followed up on these earlier works with a comparative study of Br\(\gamma\) line emission in seven T Tauri stars with strong Br\(\gamma\) signals. 
   There the interpretation of the derived interferometric sizes and positional offsets of the Br\(\gamma\) emission region is supplemented by the use of a simple axisymmetric magnetospheric accretion model. This model is used to produce synthetic interferometric observables in order to 
   investigate and identify the characteristic behaviour of the magnetospheric accretion paradigm as seen through the lens of interferometry. As one of the key results, the study finds that, while the weakest accretors in the sample, TW Hya and DoAr 44, are in good agreement with the accretion model 
-  and co-rotation criterion, the remaining targets show emission on spatial scales beyond typical magnetospheric radii. TBC...
+  and co-rotation criterion, the remaining targets show emission on spatial scales beyond typical magnetospheric radii. Given the apparent limitations of the axisymmetric magnetospheric accretion scenario to explain many of the spectrointerferometric signatures obtained with GRAVITY, 
+  it is obvious that a more complex model is needed to approximate the observations. Previous theoretical works by, for example, <a href="https://www.scixplorer.org/abs/2001A%26A...377..589G/abstract">Garcia et al. (2001)</a> and <a href="https://www.scixplorer.org/abs/2010A%26A...522A.104L/abstract">Lima et al. (2010))</a> 
+  suggest that a magnetically driven wind, launched through magnetohydrodynamical (MHD) processes, could reach temperatures on the order of \(10^4\) K close to the disk surface. Such an MHD wind could thus provide a sufficiently hot and dense environment to produce a significant 
+  amount of Br\(\gamma\) radiation on spatial scales close to the magnetosphere but larger than the co-rotation radius (<a href="https://www.scixplorer.org/abs/2016smfu.book..347R/abstract">Romanova & Owocki 2016</a>). In this paper, we build not only on our own previous work, 
+  but expand upon the body of interferometric studies of inflow/outflow mechanisms in general (e.g. <a href="https://www.scixplorer.org/abs/2010ApJ...718..774E/abstract">Eisner et al. 2010</a>). For the first time, we combine sophisticated modelling efforts of the near-infrared (NIR) 
+  signatures of disk winds and magnetospheric accretion in T Tauri stars with the unparalleled spatial resolution of long-baseline interferometry.
 </p>
 
 <h2> Analysis </h2>
-
+<p>
+We made use of MCFOST (<a href="https://www.scixplorer.org/abs/2006A%26A...459..797P/abstract">Pinte et al. 2006</a>, <a href="https://www.scixplorer.org/abs/2009A%26A...498..967P/abstract">2009</a>) to produce intensity maps, such as shown in the figure below, in the wavelength range of the Br\(\gamma\) line. 
+MCFOST is a dust and atomic line Monte Carlo and ray-tracing based radiative transfer code. It is capable of computing both line and continuum fluxes in multi-level atomic systems under non-local thermodynamical equlibrium (non-LTE) conditions (<a href="https://www.scixplorer.org/abs/2021A%26A...647A..27T/abstract">Tessore et al. 2021</a>, <a href="https://www.scixplorer.org/abs/2023A%26A...671A.129T/abstract">2023</a>).
+Under the magnetospheric accretion paradigm, the inner disk is magnetically truncated at a certain distance from the central star, at which point gas is funneled along the magnetic field lines and transported onto the stellar surface near the poles. In order to compute the emission produced in such a system with the MCFOST code, 
+we employ the model presented in (<a href="https://www.scixplorer.org/abs/1994ApJ...426..669H/abstract">Hartmann et al. (1994)</a>; Kurosawa et al. (<a href="https://www.scixplorer.org/abs/2006MNRAS.370..580K/abstract">2006</a>, <a href="https://www.scixplorer.org/abs/2011MNRAS.416.2623K/abstract">2011</a>), and 
+<a href="https://www.scixplorer.org/abs/2010A%26A...522A.104L/abstract">Lima et al. (2010)</a> to define the hydrogen mass density \(\rho\), the temperature profile \(T(R)\), and the poloidal velocity \(v_p\) along the field lines. We refer to those works for a more quantitative description of the model.
+In order to ensure a high degree of flexibility when adjusting the outflow component in the system, we chose to adapt the kinematic disk wind model described by <a href="https://www.scixplorer.org/abs/1995MNRAS.273..225K/abstract">Knigge et al. (1995)</a>. Their model follows the basic principle of 
+the magneto-centrifugal disk wind as proposed by <a href="https://www.scixplorer.org/abs/1982MNRAS.199..883B/abstract">Blandford & Payne (1982)</a>, which features a mass outflow arising from a disk in Keplerian rotation along a range of open field lines anchored at the disk midplane.
+The channel maps computed with MCFOST were used to extract synthetic spectral and interferometric data which were then compared to the observational data set obtained with GRAVITY for RU Lup in 2021.
+</p>
 
 <h2> Conclusions </h2>
+<p>
+  Both axisymmetric and non-axisymmetric magnetospheric accretion models produce either centrally peaked or flat characteristic size profiles across the line. No parameter configuration leads to a size increase at high velocities and a minimum size at the line centre, as observed for RU Lup. 
+  While it is possible to fit the central component of the Br\(\gamma\) line with a hot magnetosphere, the blueshifted excess emission that we detect observationally cannot be emulated. <br/>
+  The variability in equivalent width, peak flux ratio, and photocentre shifts that we find between the 2018 and 2021 epochs of the observation is on the order of the variation that we detect when comparing the line profile of the nonaxisymmetric magnetospheric accretion model at different azimuth angles. 
+  This could indicate that between 2018 and 2021 we are observing a tilted dipole at different phases during the stellar rotational period. <br/> 
+  Only disk wind models with sufficiently fast winds to produce double peaked spectral features at the spectral resolution of GRAVITY are associated with an increase in emission region sizes at high velocities. 
+  We do not manage to reproduce both the centrally peaked line profile and the increase in the size profile simultaneously with a disk wind alone. <br/> 
+  Hybrid models, combining a strong magnetospheric component that dominates the central channels of the line and a fast double peaked wind component, can reproduce the trends in both line profile and sizes at the same time as parameters that appear mostly in agreement with previous
+  observational findings on the physical characteristics of RU Lup. The magnitude of the model photocentre shifts overestimates the observational photocentre profile across all model variations by factor of four or more, including the hybrid models. <br/>
+  Our best fitting hybrid model manages to well reproduce the 2021 Br\(\gamma\) spectral line and characteristic sizes across the line. Still, in that case, the truncation radius exceeds the co-rotation radius by more than 50\(\%\), meaning that part of the gas is found beyond the centrifugal barrier, 
+  where it is expected to be expelled and not accreted. In conclusion, we find that the success of the hybrid approach to modelling the Br\(\gamma\) region strongly supports the idea of a multi-component emission environment for certain class II low mass YSOs with large mass accretion rates such as RU Lup.
+</p>
