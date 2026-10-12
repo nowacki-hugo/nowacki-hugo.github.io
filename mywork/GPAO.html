@@ -11,7 +11,7 @@ background: '/img/Paranal.png'
   (rather 30 when considering anisoplanetism). This improvement is available, and is described in more details in This article
 </p>
 <p>
-  Theen, the Laser Guide Stars (LGS) allow for a correction of the tip-tilt induced by the atmosphere without the necessity a natural guide star nearby. This improvement increases the limiting G magnitude from 14 to 18 
+  Then, the Laser Guide Stars (LGS) allow for a correction of the tip-tilt induced by the atmosphere without the necessity a natural guide star nearby. This improvement increases the limiting G magnitude from 14 to 18 
   and contributes to the extension of the sky coverage, in combination with GRAVITY-Wide. It is available since 2026.
 </p>
 <p>
@@ -22,10 +22,64 @@ background: '/img/Paranal.png'
 <span class="caption text-muted">Overview of the main improvements provided by GRAVITY+. Figure from GRAVITY+ Collaboration (2022)</span>
 <img class="img-fluid" src="{{ site.baseurl }}/img/posts/GP_overview.png" alt="See Figure 1 of GRAVITY+ Collaboration et al. (2022)" style="width: 30vw; min-width: 330px;" align="center">
 </div>
-<h3>The deformable mirrors and their mount</h3>
+
+<h2>The deformable mirrors and their mount</h2>
 <p>
 GPAO can be divided into several sub-parts. Each of these sub-part was the responsibility of a specific partner among the GRAVITY+ consortium. The Max Planck institute (MPE) in Graching, Germany was 
   responsible for the wavefront sensor. The Meudon observatory in France (LESIA) was in charge of the real-time computeroperating the system.
   The Nice observatory (OCA) organised and hosted integration testings. Finally, the Grenoble observatory (IPAG) was in charge of the corrective Optics (CO). That is, the deformable mirors and the mounts that host them.
   This system itself can be decomposed in different sub-parts : the Deformable Mirrors (DM), the Quasi-Static Mount (QSM), the gimbal mount, the electronic rack and the cooling system.
 </p>
+<p>
+  The DMs are the very heart of GPAO. Their 100 mm pupil in diameter, is deformed by 1432 actuators (40 for MACAO). There are 6 mirrors in total :one per UT, and two splits.
+</p>
+<p>
+The QSM can do three translations (X, Y, Z). They are performed manually for the alignement of the DMs in translation, relative to their optical train. 
+  The tip-tilt alignement on the other hand, is performed by the gimbal mount. This element is attached at the bottom of the QSM, with a 13.26 degrees with respect to the vetical
+  because of the optical path within the Coudé train, where the DMs are located.
+</p>
+<p>
+Fianlly, an electronic cabinet allows to control the tip-tilt motions and to pilot the DMs. It includes the electronics that control the DMs actuators and recovers informations on the environment, such as temperature.
+  It also includes a Programmable Logic Controller(PLC) which pilots all the electronics of the CO. This cabinet comes with a cooling system connected to Paranal's closed circuit. This system controls the temperature of the electronic cabinet
+  and of the DM thanks to interfaces fixed on each side of the DMs' body.
+</p>
+<p>
+I characterised and tested the whole systems in Grenoble, on a test bench including an optics table and an aluminum stool. 
+  This stool reproduced the telescopes interface inside which the COs were eventually installed. Most of the optical measurement were performed with an autocolimating scope. 
+  Before the integration of GPAO, I explored three problematics representative of the DMs operations, and which all represented a potential no-go for the whole CO, for GPAO and therefore GRAVITY+.
+</p>
+<h3> Environment of the DMs : vibrations</h3>
+<p>
+Because Chile is a very active seismic region, the VLTI facilities are often exposed to Earthquakes that can be intense. As an example, a 7.3 magnitude
+Earthquake happened 150 km from Paranal on July 18th, 2024, during GPAO installation and verifaction activities... As a consequence, ESO pushes for a better understanding of the impact of vibrations on the systems.
+Beyond seismic activity, these vibrations also come from the very noisy VLTI that includes a lot of mechanical excitations (operating instruments, cooling systems, and also unidentified sources). 
+Several eigen modes of the VLTI have been identified below 100 Hz, and not all of them are identified, which forbids to correct them completely (Woillez et al., 2016).
+Therefore, I studied the response of the full system (CO with QSM, gimbal, DM and cables) to mechanical stimulation to make sure it did not include eigen modes lower than 100 Hz, which could resonnate with the observatory.
+This test was particularly critical as an early simulation of the system revealed a first tip-tilt mode at 50.85 Hz, caused by the motors of the gimbal.
+</p>
+<p>
+  Fortunately enough, my tests showed that the lowest mode was 166 Hz, as the early simulation underastimated the stiffness of the DM's cables, which increased the frequency of this first mode.
+  I concluded that the system should not be damaged by the vibration noise of the observatory.
+</p>
+<h3> Environment of the DMs : local turbulence</h3>
+<p>
+Because the mirrors are located in the Coudé trains, they are facing down. Their operation generates a lot of heat, which is mostly dissipated by conduction, including to the deformable membrane of the mirror.
+The membrane then heats the air in front of it. Because of the face-down configuration and the cavity in which the DMs are placed, convection is limited in front of the membrane, and a hot bubble of air can form.
+This bubble can then be transpored by air flows once it reaches sizes of the order of the gimbal (about 10 cm). The inclinaison of the bottom of the QSM would then cause a turbulent motion of air in the field of view of the mirrors : 
+a local turbulence. Beyond GPAO, this phenomenon has been anticipated as a risk early in the developments of large observatories. So much so that it gave birth to a now standard specification : Every system should be kept within +/- 1.5 degrees
+from the ambiant temperature. Such a specification can be a real challenge for the design of active systems, particularly DMs using voice coil actuators, dissipating a lot of heat near the optical surface. This technology
+is widely spread, from the CHARA Array (ten Brumelaar et al., 2018) to the ATs of the VLTI (Hautbois et al., 2020), and of course GPAO. Cherry on the cake, the stifness of the actuators depends on the temprature, meaning 
+that this specification constrains strongly the critical trade-off between speed, stroke and heat produced. In the case of NAOMI, decision was taken to ignore this specification with no notable loss of performance.
+Therefore, I invistigated this phenomenon of local turbulence in the context of GPAO, and presented my results in a poster and a proceeding of the "SPIE Astronomical Telescopes + Instrumentation 2022" conference in Montreal (Nowacki et al., 2022)
+</p>
+<p>
+  After careful characterisation of the spatial and temporal variation of the local turbulence over a range of 20 degrees, I could find no impact of the temperature of the mirrors on the local turbulence. 
+  This counter intuitive result is consistent with the NAOMI performances on the ATs.
+</p>
+
+<h3> Environment of the DMs : temperature and gains</h3>
+<p>
+  Finally, I have characterised the impact of this heating caused by the actuators on their own stroke. To do so, I studied the behaviour of the gains for all actuators.
+</p>
+
+
